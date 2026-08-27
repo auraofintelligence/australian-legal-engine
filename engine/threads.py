@@ -233,8 +233,16 @@ class ThreadMap:
         """Acts your sources point at but do not contain.
 
         This is the 2013 thread-following turned into a next step: the
-        cabinet you have tells you which acts it leans on, so the gaps in
-        it are named by the law itself rather than guessed at.
+        collection you have names the acts it leans on, so what sits
+        outside it comes from the law rather than from guesswork.
+
+        It is a list of what the law leans on, not a list of mistakes. The
+        first run of this over one real collection put the Income Tax
+        Assessment Act at the top with 1,365 references, and the right
+        answer there was still to leave it out: it governs investment
+        income and capital gains, and the person reading had neither. The
+        count is a fact about the text. Whether it matters is not, and
+        nothing here can settle it.
         """
         counts: dict[str, int] = {}
         examples: dict[str, list[str]] = {}

@@ -47,12 +47,27 @@ does not contain. This is a reading list nobody had to guess at.
 | 29 | Migration Act 1958 | Anti-Money Laundering and Counter-Terrorism Financing Act 2006 s 31(b) |
 | 27 | Transport Infrastructure Act 1994 | Transport Operations (Passenger Transport) Act 1994 s 104(3)(b) |
 
-The Income Tax Assessment Act 1997 sits at the top by a wide margin.
-The collection holds both volumes of the Taxation Administration Act
-1953, which is the machinery act: how tax is collected, assessed and
-enforced. It points at the Assessment Act, which says what is taxable,
-more than a thousand times. Reading one without the other is reading
-the procedure for a rule you have not got.
+## What the engine could not tell you
+
+The Income Tax Assessment Act 1997 sits at the top by a wide margin, and
+it is worth being precise about what that does and does not mean.
+
+The count is a fact about the text: acts in this collection refer to that
+act 1,365 times. Whether it belonged in the collection is a different
+question, and the engine has no way to reach it.
+
+Here the answer is no. The Assessment Act says what is taxable: income
+from investments, capital gains, deductions against assets. The person who
+built this collection had no assets and no investments, so none of it
+applied to him. What did apply is the other half of tax law, and that is
+what he took: the Taxation Administration Act 1953 in both volumes, the
+pay as you go act, the tax file number application, and the small supplier
+form that started the whole read. How tax leaves a wage, and how the office
+that takes it must behave.
+
+So read this list as what the law leans on, not as a list of mistakes. A
+machine can count references. It cannot know your life, and the count
+settles nothing on its own.
 
 ## Which act leans on which
 

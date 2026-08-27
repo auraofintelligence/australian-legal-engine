@@ -193,13 +193,17 @@ def cmd_threads(args: argparse.Namespace) -> int:
     reading = thread_map.reading_list()
     if reading:
         print("Acts your sources point at but do not contain.")
-        print("This is your reading list, named by the law itself:\n")
+        print("What the law leans on, not what you have missed. Whether any")
+        print("of it touches your life is a question the counts cannot answer:")
+        print()
         for act, count, examples in reading[:args.limit]:
             print(f"  {count:4d} reference(s)  {act}")
             print(f"        first seen at: {examples[0]}")
         print()
         print(f"{len(reading)} act(s) in total. Each is free to read on its "
               f"jurisdiction's register.")
+        print("A high count means the law refers to it often. It does not")
+        print("mean you need it.")
     return 0
 
 
