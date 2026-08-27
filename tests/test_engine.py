@@ -61,6 +61,14 @@ class TestTextClean(unittest.TestCase):
             textclean.rejoin_split_words("it may be so", vocabulary),
             "it may be so")
 
+    def test_rejoins_a_systematic_split(self):
+        # A fault that repeats makes its own fragment common, which is the
+        # case an earlier "is the fragment rare" rule got wrong.
+        vocabulary = textclean.build_vocabulary("agent " * 258 + "agen " * 9)
+        self.assertEqual(
+            textclean.rejoin_split_words("the lessor's agen t", vocabulary),
+            "the lessor's agent")
+
     def test_leaves_rare_joins_alone(self):
         vocabulary = textclean.build_vocabulary("polic e")
         self.assertEqual(

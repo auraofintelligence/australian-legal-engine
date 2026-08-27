@@ -96,6 +96,9 @@ QUEENSLAND = Profile(
         _p(r"^\s*\[s\s*\d+[A-Z]{0,3}\]\s*$"),
         _p(r"^\s*Reprint\s+\d+[A-Z]?\s+effective\b", re.I),
         _p(r"^\s*Current as at\b", re.I),
+        # The footer sometimes extracts as one line, the page
+        # number and reprint note together.
+        _p(r"^\s*Page\s+\d+\s+Reprint\b", re.I),
         _p(r"^\s*Page\s+\d+\s*$", re.I),
         _p(r"^\s*(Chapter|Part|Division|Subdivision|Schedule)\s+[\dIVXLCA-Z]+\s"),
         _p(r"^\s*Authorised by the Parliamentary Counsel\b", re.I),

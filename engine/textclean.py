@@ -81,7 +81,7 @@ def collapse(text: str) -> str:
     return " ".join(clean(text).split())
 
 
-_SPLIT_CANDIDATE = re.compile(r"\b([A-Za-z]{2,})([ ])([A-Za-z]{1,2})\b")
+_WORD_SPAN = re.compile(r"[A-Za-z]+")
 _ALPHA = re.compile(r"[a-z]+")
 
 
@@ -94,30 +94,58 @@ def build_vocabulary(text: str) -> dict[str, int]:
 
 
 def rejoin_split_words(text: str, vocabulary: dict[str, int],
-                       min_joined: int = 5, max_fragment: int = 2) -> str:
+                       min_joined: int = 5, ratio: float = 4.0) -> str:
     """Repair words that extraction split apart, using the document's own words.
 
     Some reprints extract as "polic e officer" and "eviden ce", where
     kerning has been read as a space. Searching such a document for
     "police" then misses the very provisions that matter.
 
-    No dictionary is needed to fix this, because the document is its own
-    dictionary: if "eviden" appears twice in 200,000 words while "evidence"
-    appears hundreds of times, the two-word reading is the broken one. Both
-    tests must pass before anything is joined, so ordinary pairs like "may
-    be" are never touched.
+    No dictionary is needed, because the document is its own. The test is
+    which reading dominates: in one tenancy act "fo" appears 41 times and
+    "for" 1,681, so the split reading is the broken one. Ordinary pairs go
+    the other way and are left alone, with a wide margin: "may" appears 554
+    times and "maybe" never; "in" 952 times and "into" 85.
+
+    Two earlier versions got this wrong in instructive ways. Asking whether
+    the fragment was rare fails exactly where it matters, because a
+    systematic fault makes its own fragments common. And sweeping with a
+    regex let a rejected pair swallow the word after it: in "agent fo r",
+    "agent fo" was tested, found meaningless, and consumed, so "fo r" never
+    got its turn. Walking word by word gives every pair its own chance.
     """
+    words = list(_WORD_SPAN.finditer(text))
+    if not words:
+        return text
 
-    def repair(match: re.Match[str]) -> str:
-        head, space, tail = match.group(1), match.group(2), match.group(3)
-        joined = (head + tail).lower()
-        if (vocabulary.get(joined, 0) >= min_joined
-                and vocabulary.get(head.lower(), 0) <= max_fragment
-                and len(tail) <= max_fragment):
-            return head + tail
-        return head + space + tail
+    pieces: list[str] = []
+    cursor = 0
+    index = 0
+    while index < len(words):
+        current = words[index]
+        following = words[index + 1] if index + 1 < len(words) else None
+        merged = False
 
-    return _SPLIT_CANDIDATE.sub(repair, text)
+        if following is not None:
+            head = current.group(0)
+            tail = following.group(0)
+            gap = text[current.end():following.start()]
+            if (gap == " " and len(head) >= 2 and 1 <= len(tail) <= 2):
+                joined_count = vocabulary.get((head + tail).lower(), 0)
+                head_count = vocabulary.get(head.lower(), 0)
+                if (joined_count >= min_joined
+                        and joined_count >= ratio * max(head_count, 1)):
+                    pieces.append(text[cursor:current.start()])
+                    pieces.append(head + tail)
+                    cursor = following.end()
+                    index += 2
+                    merged = True
+
+        if not merged:
+            index += 1
+
+    pieces.append(text[cursor:])
+    return "".join(pieces)
 
 
 def is_mostly_upper(line: str) -> bool:
