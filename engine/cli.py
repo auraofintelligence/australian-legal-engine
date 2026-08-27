@@ -59,11 +59,18 @@ def cmd_index(args: argparse.Namespace) -> int:
         for warning in act.warnings:
             print(f"    note: {warning}")
 
-    index = build(paths, profile_key=args.profile, on_progress=progress)
+    def skipped(path: str, reason: str) -> None:
+        print(f"  SKIPPED {Path(path).name}: {reason}")
+
+    index = build(paths, profile_key=args.profile, on_progress=progress,
+                  on_skip=skipped)
     out = Path(args.out)
     index.save(out)
     stats = index.stats()
     print(f"\nIndexed {stats['provisions']} provisions from {stats['acts']} act(s).")
+    if index.skipped:
+        print(f"Skipped {len(index.skipped)} document(s) that could not be read; "
+              f"`engine check` lists them.")
     print(f"Written to {out} ({out.stat().st_size / 1_000_000:.1f} MB).")
     return 0
 
@@ -129,6 +136,10 @@ def cmd_check(args: argparse.Namespace) -> int:
     for source in index.sources:
         for warning in source.get("warnings", []):
             problems.append(f"{source['act']}: {warning}")
+    for entry in index.skipped:
+        problems.append(
+            f"{Path(entry['path']).name}: not read at all, because "
+            f"{entry['reason']}. Nothing from this document is searchable.")
 
     print(f"Provisions indexed: {stats['provisions']}")
     print(f"Acts indexed:       {stats['acts']}")
@@ -146,6 +157,81 @@ def cmd_check(args: argparse.Namespace) -> int:
           "and searchable offline.")
     print("What it is not: current law, a complete corpus, or legal advice. "
           "Check the register before relying on any provision.")
+    return 0
+
+
+def cmd_threads(args: argparse.Namespace) -> int:
+    from . import threads as threads_module
+
+    index = _load_index(Path(args.index))
+    thread_map = threads_module.build(index)
+    stats = thread_map.stats()
+
+    if args.json:
+        print(json.dumps({
+            "stats": stats,
+            "act_links": [{"from": a, "to": b, "count": n}
+                          for (a, b), n in sorted(thread_map.act_links().items(),
+                                                  key=lambda kv: -kv[1])],
+            "reading_list": [{"act": act, "referenced": count,
+                              "referenced_from": examples}
+                             for act, count, examples in thread_map.reading_list()],
+        }, indent=2))
+        return 0
+
+    print(f"{stats['threads']} threads found across {stats['acts_in_index']} act(s).")
+    print(f"By kind: {json.dumps(stats['by_relation'])}\n")
+
+    links = sorted(thread_map.act_links().items(), key=lambda kv: -kv[1])
+    if links:
+        print("Which act leans on which:")
+        for (source, target), count in links[:args.limit]:
+            print(f"  {count:4d}  {source[:40]:42s} -> {target}")
+        print()
+
+    reading = thread_map.reading_list()
+    if reading:
+        print("Acts your sources point at but do not contain.")
+        print("This is your reading list, named by the law itself:\n")
+        for act, count, examples in reading[:args.limit]:
+            print(f"  {count:4d} reference(s)  {act}")
+            print(f"        first seen at: {examples[0]}")
+        print()
+        print(f"{len(reading)} act(s) in total. Each is free to read on its "
+              f"jurisdiction's register.")
+    return 0
+
+
+def cmd_trace(args: argparse.Namespace) -> int:
+    from . import threads as threads_module
+
+    index = _load_index(Path(args.index))
+    thread_map = threads_module.build(index)
+    trail = threads_module.trace(index, thread_map, args.act, args.section,
+                                 depth=args.depth)
+
+    if args.json:
+        print(json.dumps([{"depth": depth, **edge.to_dict()}
+                          for depth, edge in trail], indent=2))
+        return 0 if trail else 1
+
+    if not trail:
+        print(f"No threads run out of {args.act} section {args.section} in "
+              f"this index. Either the provision points nowhere, or it is "
+              f"not indexed.")
+        return 1
+
+    print(f"Threads out of {args.act} section {args.section}, "
+          f"{args.depth} step(s) deep:\n")
+    for depth, edge in trail[:args.limit]:
+        indent = "  " * depth
+        print(f"{indent}{edge.source_address}")
+        print(f"{indent}  --{edge.relation}--> {edge.target_label}")
+        print(f"{indent}  \"{edge.quote[:120]}\"")
+        print()
+    if len(trail) > args.limit:
+        print(f"({len(trail) - args.limit} more threads not shown; "
+              f"raise --limit to see them.)")
     return 0
 
 
@@ -186,6 +272,23 @@ def main(argv: list[str] | None = None) -> int:
     sources_parser = subparsers.add_parser("sources", help="list what is indexed")
     sources_parser.add_argument("--index", default=str(DEFAULT_INDEX))
     sources_parser.set_defaults(func=cmd_sources)
+
+    threads_parser = subparsers.add_parser(
+        "threads", help="map the references between provisions and acts")
+    threads_parser.add_argument("--index", default=str(DEFAULT_INDEX))
+    threads_parser.add_argument("--limit", type=int, default=15)
+    threads_parser.add_argument("--json", action="store_true")
+    threads_parser.set_defaults(func=cmd_threads)
+
+    trace_parser = subparsers.add_parser(
+        "trace", help="follow the threads out of one provision")
+    trace_parser.add_argument("act")
+    trace_parser.add_argument("section")
+    trace_parser.add_argument("--depth", type=int, default=2)
+    trace_parser.add_argument("--limit", type=int, default=20)
+    trace_parser.add_argument("--index", default=str(DEFAULT_INDEX))
+    trace_parser.add_argument("--json", action="store_true")
+    trace_parser.set_defaults(func=cmd_trace)
 
     check_parser = subparsers.add_parser(
         "check", help="report the limits of the current index")

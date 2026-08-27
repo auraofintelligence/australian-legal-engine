@@ -190,20 +190,47 @@ def _is_contents_line(line: str) -> bool:
     return bool(_LEADER.search(line))
 
 
-def _is_furniture(line: str, profile: profiles.Profile) -> bool:
+def _is_furniture(line: str, profile: profiles.Profile,
+                  banners: frozenset[str] = frozenset()) -> bool:
     stripped = line.strip()
     if not stripped:
         return False
+    # The act's own short title, alone on a line, is the running header
+    # every drafting office prints. It is never operative text, and left in
+    # it both pollutes provisions and pulls every search towards the acts
+    # with the most pages.
+    if stripped.casefold().strip(" .,") in banners:
+        return True
     for pattern in profile.furniture:
         if pattern.match(stripped):
             return True
     return False
 
 
+# State and territory names stand alone on Queensland-style cover pages.
+_JURISDICTION_BANNERS = frozenset({
+    "queensland", "new south wales", "victoria", "western australia",
+    "south australia", "tasmania", "australian capital territory",
+    "northern territory", "commonwealth of australia", "australia",
+    "contents", "notes", "endnotes", "table of provisions",
+})
+
+
 def parse(document: Document) -> ParsedAct:
     """Rebuild the structure of one extracted document."""
     profile = profiles.get(document.profile_key)
     warnings = list(document.warnings)
+
+    # Lines that are page furniture for this particular document: its own
+    # title, and the jurisdiction banners that sit on a cover page.
+    banners = set(_JURISDICTION_BANNERS)
+    title = document.title.casefold().strip(" .,")
+    if len(title) > 6:
+        banners.add(title)
+        # Compilations print the title with its act number beside it.
+        if document.act_number:
+            banners.add(f"{title} act no. {document.act_number}".strip())
+    banners = frozenset(banners)
 
     sections: list[Provision] = []
     definitions: list[Provision] = []
@@ -246,7 +273,7 @@ def parse(document: Document) -> ParsedAct:
             line = raw_line.rstrip()
             if not line.strip():
                 continue
-            if _is_furniture(line, profile):
+            if _is_furniture(line, profile, banners):
                 continue
 
             # A table of contents repeats every heading in the act. Parsing it

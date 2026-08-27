@@ -81,6 +81,45 @@ def collapse(text: str) -> str:
     return " ".join(clean(text).split())
 
 
+_SPLIT_CANDIDATE = re.compile(r"\b([A-Za-z]{2,})([ ])([A-Za-z]{1,2})\b")
+_ALPHA = re.compile(r"[a-z]+")
+
+
+def build_vocabulary(text: str) -> dict[str, int]:
+    """Count the words a document uses, as its own reference dictionary."""
+    counts: dict[str, int] = {}
+    for token in _ALPHA.findall(text.lower()):
+        counts[token] = counts.get(token, 0) + 1
+    return counts
+
+
+def rejoin_split_words(text: str, vocabulary: dict[str, int],
+                       min_joined: int = 5, max_fragment: int = 2) -> str:
+    """Repair words that extraction split apart, using the document's own words.
+
+    Some reprints extract as "polic e officer" and "eviden ce", where
+    kerning has been read as a space. Searching such a document for
+    "police" then misses the very provisions that matter.
+
+    No dictionary is needed to fix this, because the document is its own
+    dictionary: if "eviden" appears twice in 200,000 words while "evidence"
+    appears hundreds of times, the two-word reading is the broken one. Both
+    tests must pass before anything is joined, so ordinary pairs like "may
+    be" are never touched.
+    """
+
+    def repair(match: re.Match[str]) -> str:
+        head, space, tail = match.group(1), match.group(2), match.group(3)
+        joined = (head + tail).lower()
+        if (vocabulary.get(joined, 0) >= min_joined
+                and vocabulary.get(head.lower(), 0) <= max_fragment
+                and len(tail) <= max_fragment):
+            return head + tail
+        return head + space + tail
+
+    return _SPLIT_CANDIDATE.sub(repair, text)
+
+
 def is_mostly_upper(line: str) -> bool:
     """True for lines that are shouting, which in statute PDFs means a banner."""
     letters = [c for c in line if c.isalpha()]

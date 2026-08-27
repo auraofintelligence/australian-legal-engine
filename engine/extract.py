@@ -184,12 +184,25 @@ def load(path: str | Path, profile_key: str | None = None) -> Document:
         raw_pages = _read_text(path)
 
     pages = [textclean.clean(page) for page in raw_pages]
+
+    # Some reprints extract with words split by stray spaces ("eviden ce").
+    # The document's own vocabulary is the evidence for putting them back.
+    vocabulary = textclean.build_vocabulary("\n".join(pages))
+    repaired = [textclean.rejoin_split_words(page, vocabulary) for page in pages]
+    rejoined = sum(1 for before, after in zip(pages, repaired) if before != after)
+    pages = repaired
+
     head = "\n".join(pages[:3])
 
     profile = (profiles.get(profile_key) if profile_key
                else profiles.detect(head, path.name))
 
     warnings: list[str] = []
+    if rejoined:
+        warnings.append(
+            f"Words split by stray spaces were rejoined on {rejoined} page(s), "
+            "using words the document itself uses elsewhere. The wording is "
+            "otherwise untouched.")
     if not any(page.strip() for page in pages):
         warnings.append(
             "No text could be extracted. The source is probably a scan; it "

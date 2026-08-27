@@ -15,7 +15,8 @@ import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from engine import answer, extract, index as index_module, parse, profiles, textclean  # noqa: E402
+from engine import (answer, extract, index as index_module, parse, profiles,  # noqa: E402
+                    textclean, threads)
 
 CORPUS = os.environ.get(
     "LEGAL_CORPUS",
@@ -43,6 +44,27 @@ class TestTextClean(unittest.TestCase):
 
     def test_collapse_flattens(self):
         self.assertEqual(textclean.collapse("a\n  b   c"), "a b c")
+
+    def test_rejoins_words_split_by_extraction(self):
+        vocabulary = textclean.build_vocabulary("police " * 9 + "evidence " * 9)
+        self.assertEqual(
+            textclean.rejoin_split_words("the polic e found eviden ce",
+                                         vocabulary),
+            "the police found evidence")
+
+    def test_leaves_ordinary_word_pairs_alone(self):
+        # "maybe" is a real word, but "may" is common on its own, so the
+        # pair must survive untouched.
+        vocabulary = textclean.build_vocabulary(
+            "maybe " * 9 + "may " * 40 + "be " * 40)
+        self.assertEqual(
+            textclean.rejoin_split_words("it may be so", vocabulary),
+            "it may be so")
+
+    def test_leaves_rare_joins_alone(self):
+        vocabulary = textclean.build_vocabulary("polic e")
+        self.assertEqual(
+            textclean.rejoin_split_words("polic e", vocabulary), "polic e")
 
 
 class TestProfiles(unittest.TestCase):
@@ -204,11 +226,95 @@ class TestGoldenSet(unittest.TestCase):
         for record in self.index.records:
             self.assertNotIn("....", record.text)
 
+    def test_running_header_does_not_leak_into_provisions(self):
+        # The act's own title on its own line is a page header, not law.
+        for record in self.index.records:
+            self.assertNotIn("Privacy Act 1988 Privacy Act 1988", record.text)
+            self.assertNotEqual(record.text.strip(), record.act.strip())
+
+    def test_unreadable_document_is_recorded_not_fatal(self):
+        index = index_module.build([PRIVACY, os.path.join(CORPUS, "nope.pdf")])
+        self.assertEqual(len(index.skipped), 1)
+        self.assertTrue(index.records, "the readable document still indexed")
+
     def test_queensland_reprint_warning_is_surfaced(self):
         tenancy = [source for source in self.index.sources
                    if "Residential Tenancies" in source["act"]][0]
         self.assertTrue(any("not an authorised copy" in warning
                             for warning in tenancy["warnings"]))
+
+
+class TestThreads(unittest.TestCase):
+    def _record(self, text: str, act: str = "Privacy Act 1988",
+                section: str = "13") -> index_module.Record:
+        return index_module.Record(
+            uid="0", text=text, address=f"{act} s {section}", act=act,
+            jurisdiction="Commonwealth", kind="subsection", section=section,
+            subsection="1", paragraph="", context="", heading="",
+            currency="11 December 2012", page=1, source="x.pdf")
+
+    def test_finds_a_reference_to_another_act(self):
+        record = self._record(
+            "notice given in accordance with section 157 of the Personal "
+            "Property Securities Act 2009")
+        edges = threads.extract_edges(record, {"Privacy Act 1988"})
+        self.assertTrue(edges)
+        self.assertEqual(edges[0].target_act, "Personal Property Securities Act 2009")
+        self.assertEqual(edges[0].target_section, "157")
+
+    def test_keeps_lowercase_words_inside_an_act_name(self):
+        record = self._record("as defined in the Freedom of Information Act 1982")
+        edges = threads.extract_edges(record, {"Privacy Act 1988"})
+        self.assertEqual(edges[0].target_act, "Freedom of Information Act 1982")
+
+    def test_reference_within_the_same_act_keeps_the_act(self):
+        record = self._record("breaches a guideline under section 17")
+        edges = threads.extract_edges(record, {"Privacy Act 1988"})
+        self.assertEqual(edges[0].target_act, "Privacy Act 1988")
+        self.assertEqual(edges[0].target_section, "17")
+
+    def test_self_reference_is_not_a_thread(self):
+        record = self._record("for the purposes of section 13", section="13")
+        self.assertEqual(threads.extract_edges(record, set()), [])
+
+    def test_relation_is_named_from_the_drafters_words(self):
+        record = self._record("This section is subject to section 20")
+        self.assertEqual(threads.extract_edges(record, set())[0].relation,
+                         "subject to")
+
+    def test_every_edge_carries_the_words_it_came_from(self):
+        record = self._record("see section 20 of the Crimes Act 1914")
+        for edge in threads.extract_edges(record, set()):
+            self.assertIn("section 20", edge.quote)
+
+    def test_wrapped_title_counts_as_the_same_act(self):
+        self.assertTrue(threads._same_act(
+            "Rooming Accommodation Act 2008",
+            "Residential Tenancies and Rooming Accommodation Act 2008"))
+        self.assertTrue(threads._same_act("the Privacy Act 1988", "Privacy Act 1988"))
+        self.assertFalse(threads._same_act("Crimes Act 1914", "Privacy Act 1988"))
+
+
+@unittest.skipUnless(HAVE_CORPUS, "2012 corpus not on this machine")
+class TestThreadsOverRealActs(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.index = index_module.build([PRIVACY])
+        cls.map = threads.build(cls.index)
+
+    def test_privacy_act_points_at_the_acts_interpretation_act(self):
+        targets = {edge.target_act for edge in self.map.edges}
+        self.assertIn("Acts Interpretation Act 1901", targets)
+
+    def test_reading_list_excludes_acts_already_indexed(self):
+        listed = {act for act, _, _ in self.map.reading_list()}
+        self.assertNotIn("Privacy Act 1988", listed)
+        self.assertTrue(listed, "the Privacy Act does point at other acts")
+
+    def test_reading_list_entries_name_where_they_came_from(self):
+        for act, count, examples in self.map.reading_list()[:5]:
+            self.assertGreaterEqual(count, 1)
+            self.assertTrue(examples[0].strip())
 
 
 class TestExtractionGuards(unittest.TestCase):

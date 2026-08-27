@@ -102,12 +102,42 @@ parser was unsure about, sections that came out empty. A warning that
 only appears in a log is a warning nobody reads, so they surface at
 index time, in `sources`, and in the notes attached to every answer.
 
+## 8. The document is its own dictionary
+
+Some Queensland reprints extract with words split by stray spaces:
+"polic e officer", "eviden ce". Searching such a document for "police"
+misses the very provisions that matter, and the acts affected here were
+the ones about police powers and tenancy, which is to say the ones a
+person is most likely to need.
+
+Fixing it needs no dictionary, because the document is its own. If
+"eviden" appears twice in 200,000 words while "evidence" appears
+hundreds of times, the two-word reading is the broken one. Both tests
+must pass before anything is joined, so an ordinary pair like "may be"
+is never touched, and the repair is reported rather than done quietly.
+This removed every detectable split across 227 pages of one act while
+leaving the Commonwealth sources, which had none, untouched.
+
+## 9. Threads are edges with evidence attached
+
+`threads.py` reads each provision for the references a drafter writes and
+builds a graph: which provision points at which, and what kind of pointing
+it is (defines, applies, subject to, despite, amends, penalty).
+
+Two things keep it honest. Every edge carries the words it came from, so a
+claim can be checked rather than trusted. And a reference is resolved in
+context the way a reader resolves it: "section 35L of that Act" belongs to
+whichever act the sentence last named, not to the act you happen to be
+reading.
+
+The most useful output is the inverse: the acts your sources point at but
+do not contain. That is a reading list named by the law itself, with the
+exact provision that points at each gap. It is the 2013 thread-following
+turned into a next step.
+
 ## What is not built
 
 - **Semantic retrieval.** The slot exists; the dependency does not.
-- **A knowledge graph** of amends / references / defines relationships,
-  so a thread can be followed mechanically the way the 2013 read
-  followed it by hand.
 - **Amendment awareness.** The engine reads a compilation as at its
   printed date. It does not know what changed after that, and it says so
   rather than implying currency it cannot support.

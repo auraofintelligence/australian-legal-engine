@@ -79,6 +79,7 @@ class Index:
     lengths: list[int] = field(default_factory=list)
     built: str = ""
     sources: list[dict] = field(default_factory=list)
+    skipped: list[dict] = field(default_factory=list)
 
     # ---- building -------------------------------------------------------
 
@@ -149,6 +150,7 @@ class Index:
             "format": "australian-legal-engine/index/1",
             "built": self.built,
             "sources": self.sources,
+            "skipped": self.skipped,
             "records": [record.to_dict() for record in self.records],
             "lengths": self.lengths,
             "postings": self.postings,
@@ -165,6 +167,7 @@ class Index:
             lengths=payload["lengths"],
             built=payload.get("built", ""),
             sources=payload.get("sources", []),
+            skipped=payload.get("skipped", []),
         )
 
     # ---- search ---------------------------------------------------------
@@ -304,17 +307,33 @@ def _matches_citation(record: Record, citation: tuple[str, str]) -> bool:
 
 
 def build(paths: list[str], profile_key: str | None = None,
-          on_progress=None) -> Index:
-    """Extract, parse and index a list of documents."""
+          on_progress=None, on_skip=None) -> Index:
+    """Extract, parse and index a list of documents.
+
+    A document that cannot be read is recorded and skipped, never fatal.
+    Encrypted PDFs, scans with no text layer and damaged files all turn up
+    in a real folder of law, and losing the other sixty because of one of
+    them would be the wrong trade.
+    """
     from datetime import datetime, timezone
 
     from . import extract, parse as parse_module
 
     index = Index(built=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     for path in paths:
-        document = extract.load(path, profile_key)
-        act = parse_module.parse(document)
-        added = index.add_act(act, source_path=str(path))
+        try:
+            document = extract.load(path, profile_key)
+            act = parse_module.parse(document)
+            added = index.add_act(act, source_path=str(path))
+        except Exception as error:
+            reason = str(error) or error.__class__.__name__
+            if "cryptography" in reason:
+                reason = ("the file is encrypted; pypdf needs the "
+                          "'cryptography' package to open it")
+            index.skipped.append({"path": str(path), "reason": reason})
+            if on_skip:
+                on_skip(str(path), reason)
+            continue
         if on_progress:
             on_progress(act, added)
     return index
