@@ -79,7 +79,8 @@ def cmd_ask(args: argparse.Namespace) -> int:
     index = _load_index(Path(args.index))
     packet = answer_module.ask(
         index, args.question, limit=args.limit,
-        jurisdiction=args.jurisdiction, act=args.act)
+        jurisdiction=args.jurisdiction, act=args.act,
+        bridge=not args.exact, wider=args.wider)
 
     if args.json:
         print(json.dumps(packet.to_dict(), indent=2))
@@ -258,6 +259,12 @@ def main(argv: list[str] | None = None) -> int:
     ask_parser.add_argument("--act", default=None)
     ask_parser.add_argument("--prompt", action="store_true",
                             help="print a grounded prompt for an AI assistant")
+    ask_parser.add_argument("--exact", action="store_true",
+                            help="search your words only, with no bridge from "
+                                 "everyday words to drafting words")
+    ask_parser.add_argument("--wider", action="store_true",
+                            help="also search terms that keep the same company "
+                                 "in your sources")
     ask_parser.add_argument("--json", action="store_true")
     ask_parser.set_defaults(func=cmd_ask)
 

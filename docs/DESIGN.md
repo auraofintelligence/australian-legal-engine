@@ -135,6 +135,33 @@ do not contain. That is a reading list named by the law itself, with the
 exact provision that points at each gap. It is the 2013 thread-following
 turned into a next step.
 
+## 10. The reader's words are not the drafter's words
+
+A tool that only answers questions phrased in legal language is a tool
+for people who already speak it, which is close to useless for the person
+this is meant to serve.
+
+The measurement makes the point. Across 101,370 provisions from the 2012
+corpus, "landlord" appears in one and "lessor" in 672. "Sacked", "cop"
+and "boss" appear in none.
+
+Two mechanisms close the gap, and they are kept apart because they are
+different kinds of claim. The hand-written bridge in `vocab.py` maps
+everyday words to drafting words: it is a judgement by a person, visible
+in the source, and meant to be edited. The corpus-derived neighbours are
+arithmetic over whatever you indexed, comparing the company each word
+keeps.
+
+The second one is opt-in, because measuring it honestly showed it
+broadens rather than sharpens: it returns lessor, tenant and
+accommodation for "premises", which lead somewhere useful without meaning
+the same thing. An early version with a looser filter returned drafting
+boilerplate ("another", "given", "following") and would have quietly made
+search worse.
+
+Whatever is added is reported in the answer's notes. A search that
+silently becomes a different search is a search you cannot trust.
+
 ## What is not built
 
 - **Semantic retrieval.** The slot exists; the dependency does not.

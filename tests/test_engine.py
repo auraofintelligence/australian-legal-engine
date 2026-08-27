@@ -16,7 +16,7 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from engine import (answer, extract, index as index_module, parse, profiles,  # noqa: E402
-                    textclean, threads)
+                    textclean, threads, vocab)
 
 CORPUS = os.environ.get(
     "LEGAL_CORPUS",
@@ -315,6 +315,58 @@ class TestThreadsOverRealActs(unittest.TestCase):
         for act, count, examples in self.map.reading_list()[:5]:
             self.assertGreaterEqual(count, 1)
             self.assertTrue(examples[0].strip())
+
+
+class TestVocabulary(unittest.TestCase):
+    def _index(self) -> index_module.Index:
+        index = index_module.Index()
+        for number, text in enumerate([
+            "The lessor must give the tenant notice before entry to the premises.",
+            "A lessor or the lessor's agent must not enter the premises without notice.",
+            "The tenant may end the tenancy by giving the lessor a notice to leave.",
+        ]):
+            provision = parse.Provision(
+                kind="subsection", number=str(number + 1), heading="",
+                text=text, act="Test Act 2000", jurisdiction="Queensland",
+                section=str(number + 1), subsection="1")
+            act = parse.ParsedAct(
+                title="Test Act 2000", jurisdiction="Queensland",
+                currency="1 January 2000", profile_key="qld",
+                sections=[provision], definitions=[])
+            index.add_act(act, source_path="test.pdf")
+        return index
+
+    def test_everyday_word_reaches_the_drafting_word(self):
+        expansion = vocab.expand(self._index(), "can my landlord enter")
+        self.assertIn("lessor", expansion.added)
+        self.assertIn("landlord", expansion.reasons["lessor"])
+
+    def test_expansion_is_always_reported(self):
+        expansion = vocab.expand(self._index(), "landlord")
+        self.assertTrue(expansion.changed)
+        self.assertTrue(expansion.describe().startswith("Also searched:"))
+
+    def test_a_word_the_sources_never_use_is_not_offered(self):
+        # No indexed provision mentions a vessel, so "boat" gains nothing.
+        expansion = vocab.expand(self._index(), "my boat")
+        self.assertEqual(expansion.added, [])
+
+    def test_query_without_everyday_words_is_left_alone(self):
+        expansion = vocab.expand(self._index(), "lessor notice entry")
+        self.assertFalse(expansion.changed)
+
+    def test_expanded_query_keeps_the_original_words(self):
+        expansion = vocab.expand(self._index(), "landlord entry")
+        self.assertTrue(expansion.as_query().startswith("landlord entry"))
+
+    def test_search_reports_the_bridge_in_its_notes(self):
+        packet = answer.ask(self._index(), "can my landlord enter", limit=3)
+        self.assertTrue(packet.found)
+        self.assertTrue(any("Also searched" in note for note in packet.notes))
+
+    def test_exact_search_does_not_widen(self):
+        packet = answer.ask(self._index(), "landlord", limit=3, bridge=False)
+        self.assertFalse(any("Also searched" in note for note in packet.notes))
 
 
 class TestExtractionGuards(unittest.TestCase):

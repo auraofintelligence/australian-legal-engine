@@ -181,9 +181,25 @@ def _note_for(extracts: list[Extract]) -> list[str]:
 
 
 def ask(index: Index, question: str, limit: int = 5,
-        jurisdiction: str | None = None, act: str | None = None) -> Packet:
-    """Retrieve the provisions that bear on a question."""
-    hits = index.search(question, limit=limit, jurisdiction=jurisdiction, act=act)
+        jurisdiction: str | None = None, act: str | None = None,
+        bridge: bool = True, wider: bool = False) -> Packet:
+    """Retrieve the provisions that bear on a question.
+
+    By default the question is widened from everyday words to drafting
+    words before searching, because otherwise an ordinary question misses
+    the law: across the 2012 corpus "landlord" appears in one provision
+    and "lessor" in 672. Anything added is reported in the notes.
+    """
+    searched = question
+    expansion = None
+    if bridge or wider:
+        from . import vocab
+
+        expansion = vocab.expand(index, question, use_corpus=wider)
+        if expansion.changed:
+            searched = expansion.as_query()
+
+    hits = index.search(searched, limit=limit, jurisdiction=jurisdiction, act=act)
     extracts = [
         Extract(
             address=record.address,
@@ -205,6 +221,8 @@ def ask(index: Index, question: str, limit: int = 5,
         "act itself would use.",
         "Legal information, not legal advice.",
     ]
+    if expansion is not None and expansion.changed:
+        notes.insert(0, expansion.describe())
     return Packet(question=question, extracts=extracts, notes=notes)
 
 

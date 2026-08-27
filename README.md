@@ -42,10 +42,31 @@ python -m engine ask "who can access my credit file" --prompt
 python -m engine threads
 python -m engine trace "Privacy Act" 13
 
+# Ask in your own words; the engine bridges them to drafting words
+python -m engine ask "can my landlord come into my house"
+python -m engine ask "sacked without notice" --wider
+
 # See what is indexed, and what limits it
 python -m engine sources
 python -m engine check
 ```
+
+### Your words, the law's words
+
+Across the whole 2012 corpus, 101,370 provisions, **"landlord" appears in one provision and "lessor" in 672**. "Sacked", "cop" and "boss" appear in no act at all. The law is searchable; the words most people would search it with are not the words it uses.
+
+So `ask` widens a question before searching, and says what it did:
+
+```
+Question: can my landlord come into my house
+Notes
+  - Also searched: lessor (the drafting word for 'landlord'),
+    premises (the drafting word for 'house'), dwelling (the drafting word for 'house')
+```
+
+Two separate things do this, kept apart because they are different kinds of claim. The bridge in `vocab.py` is a short hand-written list, visible in the source and meant to be argued with. The `--wider` flag adds terms the indexed text itself uses in the same company: ask about `premises` and it offers lessor, tenant, accommodation; ask about `superannuation` and it offers trustee, funds. Those are neighbours rather than synonyms, which is why they are opt-in.
+
+`--exact` turns both off and searches your words alone.
 
 ### Following the threads
 
@@ -93,16 +114,17 @@ Indexed 6756 provisions from 3 acts. Written to data/index.json (4.8 MB).
 | Index | `engine/index.py` | BM25 over provisions, plus exact-phrase and citation matching and a heading boost. Plain JSON, offline, portable. |
 | Answer | `engine/answer.py` | Assembles a packet: the provisions, their addresses, their currency dates, the register to check them at, and a prompt that forbids a model from inventing a citation. |
 | Threads | `engine/threads.py` | Reads every provision for the references a drafter writes, builds a graph of them, and turns the acts your sources point at but do not contain into a reading list. |
+| Vocabulary | `engine/vocab.py` | Bridges everyday words to drafting words, and reports every addition. |
 
 Adding a jurisdiction means adding a profile, not editing the parser.
 
 ## Status
 
-**Built and tested:** everything above, verified by 44 tests including a golden set that asserts real citations against the real 2012 acts (`python tests/test_engine.py`).
+**Built and tested:** everything above, verified by 51 tests including a golden set that asserts real citations against the real 2012 acts (`python tests/test_engine.py`).
 
 Run over the whole 2012 corpus, 61 documents in one command, it indexed **101,370 provisions from 41 acts**. One encrypted PDF was skipped and named; the forms, Magna Carta and the Universal Declaration reported no sections found rather than pretending, because they are not Australian statutes.
 
-**Not built:** semantic search (the design keeps a slot for Australian legal embeddings, but the core stays dependency-light on purpose), amendment awareness beyond a compilation's printed date, and any automated acquisition of law. The engine reads documents you already hold; it does no fetching of its own. That boundary is deliberate: the registers set terms on automated access, and asking is the path.
+**Not built:** neural embeddings (the vocabulary bridge above covers the plain-words problem without them, and the slot stays open), amendment awareness beyond a compilation's printed date, and any automated acquisition of law. The engine reads documents you already hold; it does no fetching of its own. That boundary is deliberate: the registers set terms on automated access, and the way through is to ask. A letter template for doing that is in [docs/PARLIAMENTARY-COUNSEL-LETTER.md](docs/PARLIAMENTARY-COUNSEL-LETTER.md).
 
 **Not a corpus.** This ships code, not law. What the engine knows is whatever you indexed, as it stood on the dates printed on those sources. `python -m engine check` prints exactly that, including every gap.
 
