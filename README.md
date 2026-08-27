@@ -89,6 +89,10 @@ This is your reading list, named by the law itself:
 
 That last part is the useful one. The gaps in your own reading get named by the law itself, with the exact provision that points at each one, rather than guessed at.
 
+Run across the whole 2012 cabinet, 41 acts and 101,371 provisions, it found **21,346 threads** and produced a reading list topped by an act that is not in the collection at all: the **Income Tax Assessment Act 1997, referenced 1,365 times**. The folder holds both volumes of the Taxation Administration Act 1953, the machinery for collecting and enforcing tax, which points at the Assessment Act, the one that says what is taxable, more than a thousand times. Reading one without the other is reading the procedure for a rule you have not got.
+
+The full result is in [examples/2012-cabinet-threads.md](examples/2012-cabinet-threads.md): act names and counts only, no legislative text.
+
 `trace` walks outward from a single provision and resolves references in context, including the awkward ones: "see section 35L of that Act" resolves to whichever act the sentence last named.
 
 A real run over three acts from the 2012 corpus:
