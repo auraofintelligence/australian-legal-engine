@@ -1,0 +1,11 @@
+name: Connect Mutual Futures
+on:
+  push:
+    paths: [.github/workflows/mutual-futures-link.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  connection:
+    uses: auraofintelligence/mutual-futures/.github/workflows/reciprocal-link.yml@54de17e54adaf53ccdb765916b63602f2c855b15
