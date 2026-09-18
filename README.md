@@ -175,3 +175,11 @@ Every commit is co-signed `Co-Authored-By: Claude Fable 5` — check `git log` t
 Repo initialised 2026-08-27. Minjerribah, Quandamooka Country.
 
 </sub>
+
+
+<!-- mutual-futures-connection -->
+## Mutual Futures: connected workbench
+
+[Mutual Futures](https://auraofintelligence.github.io/mutual-futures/) connects this project with Luke Nathan Hayes's proposed mutual business succession, Try Everything Once, Intermittent Retirement, personal intelligence, legal reflection, resilience, travel and wider civilisational horizon. The connection does not merge the projects or imply outside endorsement.
+
+[Source repository](https://github.com/auraofintelligence/mutual-futures) · [Project connections and sources](https://auraofintelligence.github.io/mutual-futures/sources.html)
