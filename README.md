@@ -153,7 +153,7 @@ ACT [legislation.act.gov.au](https://www.legislation.act.gov.au/) ·
 NT [legislation.nt.gov.au](https://legislation.nt.gov.au/) ·
 [AustLII](https://www.austlii.edu.au/)
 
-**Beyond Australia:** `docs/world-law-repositories.json` lists where 234 countries, territories and Australian levels officially publish their laws (legislation databases and official gazettes, plus EUR-Lex for EU members and PacLII for the Pacific), with Redland City's local laws for home. It comes from [World Travel Patterns](https://github.com/auraofintelligence/world-travel-patterns), which keeps it current; each link records whether it loaded on the date shown. Get acts from these official publishers, then index them here. Not knowing a law is no defence.
+**Beyond Australia:** `docs/world-law-repositories.json` lists where 250 countries, territories and Australian levels officially publish their laws (legislation databases and official gazettes, plus EUR-Lex for EU members and PacLII for the Pacific), with Redland City's local laws for home. It comes from [World Travel Patterns](https://github.com/auraofintelligence/world-travel-patterns), which keeps it current; each link records whether it loaded on the date shown. Get acts from these official publishers, then index them here. Not knowing a law is no defence.
 
 ## Neighbouring rooms
 

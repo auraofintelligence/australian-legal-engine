@@ -21,6 +21,15 @@
     "checked": "2026-11-01"
    }
   ],
+  "af": [
+   {
+    "name": "Ministry of Justice: Official Gazette (de facto authority)",
+    "publisher": "Ministry of Justice, Afghanistan",
+    "url": "https://moj.gov.af/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
   "ag": [
    {
     "name": "Laws of Antigua and Barbuda",
@@ -282,6 +291,15 @@
     "checked": "2026-11-01"
    }
   ],
+  "bi": [
+   {
+    "name": "Amategeko (laws and Journal officiel search)",
+    "publisher": "Government of Burundi",
+    "url": "https://amategeko.gov.bi/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
   "bj": [
    {
     "name": "Journal officiel / SGG Bénin",
@@ -414,6 +432,22 @@
     "publisher": "Leganet",
     "url": "https://www.leganet.cd/",
     "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cg": [
+   {
+    "name": "Secrétariat général du Gouvernement (Journal officiel)",
+    "publisher": "Government of the Republic of the Congo",
+    "url": "https://sgg.cg/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Gazettes Africa: Republic of the Congo",
+    "publisher": "Laws.Africa and AfricanLII",
+    "url": "https://gazettes.africa/gazettes/cg",
+    "check": "loaded",
     "checked": "2026-11-01"
    }
   ],
@@ -561,6 +595,15 @@
     "checked": "2026-11-01"
    }
   ],
+  "dj": [
+   {
+    "name": "Journal officiel de la République de Djibouti",
+    "publisher": "Government of Djibouti",
+    "url": "https://www.journalofficiel.dj/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
   "dk": [
    {
     "name": "Retsinformation",
@@ -621,6 +664,24 @@
     "publisher": "National Printing Office",
     "url": "https://www.alamiria.gov.eg/",
     "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "eh": [
+   {
+    "name": "Bulletin officiel du Royaume du Maroc (applies where Morocco administers; status disputed)",
+    "publisher": "Secrétariat général du Gouvernement, Morocco",
+    "url": "https://www.sgg.gov.ma/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "er": [
+   {
+    "name": "Gazette of Eritrean Laws (Library of Congress foreign legal gazettes)",
+    "publisher": "Library of Congress",
+    "url": "https://www.loc.gov/collections/foreign-legal-gazettes/",
+    "check": "refuses automated checks (open it in a browser)",
     "checked": "2026-11-01"
    }
   ],
@@ -786,6 +847,15 @@
     "checked": "2026-11-01"
    }
   ],
+  "gn": [
+   {
+    "name": "Journal officiel de la République de Guinée",
+    "publisher": "Secrétariat général du Gouvernement",
+    "url": "https://journal-officiel.sgg.gov.gn/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
   "gp": [
    {
     "name": "Légifrance (French law applies)",
@@ -795,11 +865,29 @@
     "checked": "2026-11-01"
    }
   ],
+  "gq": [
+   {
+    "name": "Boletín Oficial del Estado de Guinea Ecuatorial",
+    "publisher": "Government of Equatorial Guinea",
+    "url": "https://boe.gob.gq/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
   "gr": [
    {
     "name": "Government Gazette (ΦΕΚ)",
     "publisher": "National Printing Office",
     "url": "https://www.et.gr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gs": [
+   {
+    "name": "South Georgia and South Sandwich Islands Laws (informal; the Gazette is the record)",
+    "publisher": "Government of SGSSI",
+    "url": "https://laws.gov.gs/",
     "check": "loaded",
     "checked": "2026-11-01"
    }
@@ -928,12 +1016,37 @@
     "checked": "2026-11-01"
    }
   ],
+  "io": [
+   {
+    "name": "British Indian Ocean Territory Administration: legislation",
+    "publisher": "BIOT Administration",
+    "url": "https://biot.gov.io/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
   "iq": [
    {
     "name": "Iraqi Legal Database",
     "publisher": "Iraqi Council of State",
     "url": "http://iraqld.hjc.iq/",
     "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ir": [
+   {
+    "name": "Laws and Regulations Portal of the Islamic Republic of Iran (Qavanin)",
+    "publisher": "Government of Iran",
+    "url": "https://qavanin.ir/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Islamic Parliament Research Center",
+    "publisher": "Majlis",
+    "url": "https://rc.majlis.ir/",
+    "check": "didn't load when checked from Australia",
     "checked": "2026-11-01"
    }
   ],
@@ -1299,6 +1412,15 @@
     "publisher": "Government of France",
     "url": "https://www.legifrance.gouv.fr/",
     "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mr": [
+   {
+    "name": "Secrétariat général du Gouvernement (Journal officiel, online since November 2025)",
+    "publisher": "Government of Mauritania",
+    "url": "https://msgg.gov.mr/",
+    "check": "loaded",
     "checked": "2026-11-01"
    }
   ],
@@ -1847,6 +1969,15 @@
     "checked": "2026-11-01"
    }
   ],
+  "sy": [
+   {
+    "name": "People's Assembly of Syria: legislation",
+    "publisher": "People's Assembly",
+    "url": "http://parliament.gov.sy/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
   "sz": [
    {
     "name": "EswatiniLII",
@@ -1862,6 +1993,15 @@
     "publisher": "Attorney General's Chambers",
     "url": "https://www.gov.tc/agc/",
     "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "td": [
+   {
+    "name": "Journal officiel du Tchad (digital portal, launched May 2026)",
+    "publisher": "Government of Chad",
+    "url": "https://journalofficieltchad.td/",
+    "check": "didn't load when checked from Australia",
     "checked": "2026-11-01"
    }
   ],
@@ -1923,6 +2063,15 @@
     "publisher": "Government of Timor-Leste",
     "url": "https://www.jornal.gov.tl/",
     "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tm": [
+   {
+    "name": "Mejlis (Parliament) of Turkmenistan: legislation",
+    "publisher": "Mejlis",
+    "url": "https://mejlis.gov.tm/",
+    "check": "loaded",
     "checked": "2026-11-01"
    }
   ],
@@ -2251,27 +2400,21 @@
   }
  ],
  "not_yet_found": [
-  "af",
-  "bi",
   "cf",
-  "cg",
-  "dj",
-  "eh",
-  "er",
-  "gn",
-  "gq",
-  "gs",
   "gw",
-  "io",
-  "ir",
   "km",
   "kp",
   "ly",
-  "mr",
   "st",
-  "sy",
-  "td",
-  "tm",
   "ye"
- ]
+ ],
+ "no_online_source": {
+  "cf": "No official online source found on 1 November 2026; the official gazette appears to be print only. Ask the country's embassy for current texts.",
+  "gw": "No official online source found on 1 November 2026; the official gazette appears to be print only. Ask the country's embassy for current texts.",
+  "km": "No official online source found on 1 November 2026; the official gazette appears to be print only. Ask the country's embassy for current texts.",
+  "kp": "No official online source found on 1 November 2026; the official gazette appears to be print only. Ask the country's embassy for current texts.",
+  "ly": "No official online source found on 1 November 2026; the official gazette appears to be print only. Ask the country's embassy for current texts.",
+  "st": "No official online source found on 1 November 2026; the official gazette appears to be print only. Ask the country's embassy for current texts.",
+  "ye": "No official online source found on 1 November 2026; the official gazette appears to be print only. Ask the country's embassy for current texts."
+ }
 }
