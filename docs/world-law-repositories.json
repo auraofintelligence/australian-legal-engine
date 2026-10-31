@@ -1,0 +1,2277 @@
+{
+ "what": "Where each country or territory officially publishes its laws: legislation databases and official gazettes. Not knowing a law is no defence.",
+ "rule": "Official publishers first; legal information institutes (LIIs) where they are the main free source. A check records whether the site loaded from Australia on the date shown, nothing more.",
+ "checked": "2026-11-01",
+ "places": {
+  "ad": [
+   {
+    "name": "BOPA (Butlletí Oficial del Principat d'Andorra)",
+    "publisher": "Government of Andorra",
+    "url": "https://www.bopa.ad/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ae": [
+   {
+    "name": "UAE Legislation",
+    "publisher": "Government of the UAE",
+    "url": "https://uaelegislation.gov.ae/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ag": [
+   {
+    "name": "Laws of Antigua and Barbuda",
+    "publisher": "Government of Antigua and Barbuda",
+    "url": "https://laws.gov.ag/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ai": [
+   {
+    "name": "Government of Anguilla: laws",
+    "publisher": "Government of Anguilla",
+    "url": "https://www.gov.ai/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "al": [
+   {
+    "name": "Qendra e Botimeve Zyrtare",
+    "publisher": "Official Publications Centre",
+    "url": "https://qbz.gov.al/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "am": [
+   {
+    "name": "ARLIS (Armenian legal information system)",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.arlis.am/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ao": [
+   {
+    "name": "Diário da República (Angola)",
+    "publisher": "Imprensa Nacional",
+    "url": "https://www.imprensanacional.gov.ao/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "aq": [
+   {
+    "name": "Antarctic Treaty Secretariat: treaty, protocol and measures",
+    "publisher": "Antarctic Treaty Secretariat",
+    "url": "https://www.ats.aq/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ar": [
+   {
+    "name": "InfoLEG / SAIJ",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.argentina.gob.ar/normativa",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "as": [
+   {
+    "name": "American Samoa Bar Association: code and regulations",
+    "publisher": "American Samoa Bar Association",
+    "url": "https://new.asbar.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "at": [
+   {
+    "name": "RIS (Legal Information System of Austria)",
+    "publisher": "Federal Chancellery",
+    "url": "https://www.ris.bka.gv.at/",
+    "check": "temporarily unavailable when checked",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au": [
+   {
+    "name": "Federal Register of Legislation",
+    "publisher": "Office of Parliamentary Counsel",
+    "url": "https://www.legislation.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/act": [
+   {
+    "name": "ACT Legislation Register",
+    "publisher": "Parliamentary Counsel's Office (ACT)",
+    "url": "https://www.legislation.act.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/nsw": [
+   {
+    "name": "NSW Legislation",
+    "publisher": "Parliamentary Counsel's Office",
+    "url": "https://legislation.nsw.gov.au/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/nt": [
+   {
+    "name": "NT Legislation",
+    "publisher": "Office of the Parliamentary Counsel (NT)",
+    "url": "https://legislation.nt.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/qld": [
+   {
+    "name": "Queensland Legislation",
+    "publisher": "Office of the Queensland Parliamentary Counsel",
+    "url": "https://www.legislation.qld.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/qld-council-6250": [
+   {
+    "name": "Redland City Council local laws",
+    "publisher": "Redland City Council",
+    "url": "https://www.redland.qld.gov.au/info/20093/local_laws",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/sa": [
+   {
+    "name": "South Australian Legislation",
+    "publisher": "Attorney-General's Department (SA)",
+    "url": "https://www.legislation.sa.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/tas": [
+   {
+    "name": "Tasmanian Legislation",
+    "publisher": "Office of Parliamentary Counsel (Tas)",
+    "url": "https://www.legislation.tas.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/vic": [
+   {
+    "name": "Victorian Legislation",
+    "publisher": "Office of the Chief Parliamentary Counsel",
+    "url": "https://www.legislation.vic.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "au/wa": [
+   {
+    "name": "WA Legislation",
+    "publisher": "Parliamentary Counsel's Office (WA)",
+    "url": "https://www.legislation.wa.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "aw": [
+   {
+    "name": "Government of Aruba: legislation",
+    "publisher": "Government of Aruba",
+    "url": "https://www.overheid.aw/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ax": [
+   {
+    "name": "Ålands författningssamling",
+    "publisher": "Government of Åland",
+    "url": "https://www.regeringen.ax/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "az": [
+   {
+    "name": "e-qanun",
+    "publisher": "Ministry of Justice",
+    "url": "https://e-qanun.az/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ba": [
+   {
+    "name": "Official Gazette of BiH",
+    "publisher": "Government of Bosnia and Herzegovina",
+    "url": "http://www.sluzbenilist.ba/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bb": [
+   {
+    "name": "Barbados Parliament: laws",
+    "publisher": "Parliament of Barbados",
+    "url": "https://www.barbadosparliament.com/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bd": [
+   {
+    "name": "Laws of Bangladesh",
+    "publisher": "Legislative and Parliamentary Affairs Division",
+    "url": "http://bdlaws.minlaw.gov.bd/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "be": [
+   {
+    "name": "Justel / Moniteur belge",
+    "publisher": "FPS Justice",
+    "url": "https://www.ejustice.just.fgov.be/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bf": [
+   {
+    "name": "Journal officiel du Burkina Faso",
+    "publisher": "Government of Burkina Faso",
+    "url": "https://www.sgg.gov.bf/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bg": [
+   {
+    "name": "Lex.bg / State Gazette",
+    "publisher": "National Assembly",
+    "url": "https://dv.parliament.bg/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bh": [
+   {
+    "name": "Legislation and Legal Opinion Commission",
+    "publisher": "Government of Bahrain",
+    "url": "https://www.lloc.gov.bh/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bj": [
+   {
+    "name": "Journal officiel / SGG Bénin",
+    "publisher": "Government of Benin",
+    "url": "https://sgg.gouv.bj/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bl": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bm": [
+   {
+    "name": "Bermuda Laws Online",
+    "publisher": "Attorney-General's Chambers",
+    "url": "https://www.bermudalaws.bm/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bn": [
+   {
+    "name": "Attorney General's Chambers: laws of Brunei",
+    "publisher": "Attorney General's Chambers",
+    "url": "https://www.agc.gov.bn/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bo": [
+   {
+    "name": "Gaceta Oficial de Bolivia",
+    "publisher": "Ministry of the Presidency",
+    "url": "https://www.gacetaoficialdebolivia.gob.bo/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bq": [
+   {
+    "name": "Overheid.nl: BES legislation (Dutch law for Bonaire, Sint Eustatius, Saba)",
+    "publisher": "Government of the Netherlands",
+    "url": "https://wetten.overheid.nl/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "br": [
+   {
+    "name": "Planalto: legislação",
+    "publisher": "Presidency of Brazil",
+    "url": "https://www4.planalto.gov.br/legislacao/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bs": [
+   {
+    "name": "Laws of The Bahamas",
+    "publisher": "Office of the Attorney General",
+    "url": "https://laws.bahamas.gov.bs/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bt": [
+   {
+    "name": "National Assembly of Bhutan: acts",
+    "publisher": "National Assembly",
+    "url": "https://www.nab.gov.bt/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bw": [
+   {
+    "name": "BotswanaLII",
+    "publisher": "BotswanaLII",
+    "url": "https://botswanalii.org/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "by": [
+   {
+    "name": "National legal internet portal",
+    "publisher": "Government of Belarus",
+    "url": "https://pravo.by/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "bz": [
+   {
+    "name": "Laws of Belize",
+    "publisher": "Government of Belize",
+    "url": "https://www.belizejudiciary.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ca": [
+   {
+    "name": "Justice Laws Website",
+    "publisher": "Department of Justice Canada",
+    "url": "https://laws-lois.justice.gc.ca/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cc": [
+   {
+    "name": "Federal Register of Legislation (Indian Ocean Territories)",
+    "publisher": "Office of Parliamentary Counsel",
+    "url": "https://www.legislation.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cd": [
+   {
+    "name": "Leganet (laws of the DRC)",
+    "publisher": "Leganet",
+    "url": "https://www.leganet.cd/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ch": [
+   {
+    "name": "Fedlex",
+    "publisher": "Federal Chancellery",
+    "url": "https://www.fedlex.admin.ch/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ci": [
+   {
+    "name": "Journal officiel de Côte d'Ivoire",
+    "publisher": "Government of Côte d'Ivoire",
+    "url": "https://www.sgg.gouv.ci/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ck": [
+   {
+    "name": "PacLII: Cook Islands",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/ck/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cl": [
+   {
+    "name": "Biblioteca del Congreso Nacional: LeyChile",
+    "publisher": "National Congress Library",
+    "url": "https://www.bcn.cl/leychile/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cm": [
+   {
+    "name": "Journal officiel / Présidence du Cameroun",
+    "publisher": "Presidency of Cameroon",
+    "url": "https://www.prc.cm/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cn": [
+   {
+    "name": "National Database of Laws and Regulations",
+    "publisher": "National People's Congress",
+    "url": "https://flk.npc.gov.cn/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "co": [
+   {
+    "name": "SUIN-Juriscol",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.suin-juriscol.gov.co/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cq": [
+   {
+    "name": "Guernsey Legal Resources (includes Sark)",
+    "publisher": "Royal Court of Guernsey",
+    "url": "https://www.guernseylegalresources.gg/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cr": [
+   {
+    "name": "SCIJ (Sistema Costarricense de Información Jurídica)",
+    "publisher": "Procuraduría General",
+    "url": "http://www.pgrweb.go.cr/scij/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cu": [
+   {
+    "name": "Gaceta Oficial de la República de Cuba",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.gacetaoficial.gob.cu/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cv": [
+   {
+    "name": "Boletim Oficial de Cabo Verde",
+    "publisher": "Imprensa Nacional",
+    "url": "https://boe.incv.cv/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cw": [
+   {
+    "name": "Government of Curaçao: legislation (officiële publicaties)",
+    "publisher": "Government of Curaçao",
+    "url": "https://www.gobiernu.cw/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cx": [
+   {
+    "name": "Federal Register of Legislation (Indian Ocean Territories)",
+    "publisher": "Office of Parliamentary Counsel",
+    "url": "https://www.legislation.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cy": [
+   {
+    "name": "CyLaw",
+    "publisher": "Cyprus Bar Association",
+    "url": "https://www.cylaw.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "cz": [
+   {
+    "name": "e-Sbírka",
+    "publisher": "Ministry of the Interior",
+    "url": "https://www.e-sbirka.cz/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "de": [
+   {
+    "name": "Gesetze im Internet",
+    "publisher": "Federal Ministry of Justice",
+    "url": "https://www.gesetze-im-internet.de/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "dk": [
+   {
+    "name": "Retsinformation",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.retsinformation.dk/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "dm": [
+   {
+    "name": "Laws of Dominica",
+    "publisher": "Government of Dominica",
+    "url": "https://dominica.gov.dm/laws-of-dominica",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "do": [
+   {
+    "name": "Consultoría Jurídica: Gaceta Oficial",
+    "publisher": "Government of the Dominican Republic",
+    "url": "https://www.consultoria.gov.do/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "dz": [
+   {
+    "name": "Journal officiel de la République algérienne",
+    "publisher": "Secrétariat général du gouvernement",
+    "url": "https://www.joradp.dz/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ec": [
+   {
+    "name": "Registro Oficial",
+    "publisher": "Corte Constitucional",
+    "url": "https://www.registroficial.gob.ec/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ee": [
+   {
+    "name": "Riigi Teataja",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.riigiteataja.ee/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "eg": [
+   {
+    "name": "Official Gazette (Al-Waqa'i al-Misriya)",
+    "publisher": "National Printing Office",
+    "url": "https://www.alamiria.gov.eg/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "es": [
+   {
+    "name": "BOE (Boletín Oficial del Estado)",
+    "publisher": "Agencia Estatal BOE",
+    "url": "https://www.boe.es/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "et": [
+   {
+    "name": "Federal Negarit Gazette",
+    "publisher": "House of Peoples' Representatives",
+    "url": "https://www.hopr.gov.et/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "fi": [
+   {
+    "name": "Finlex",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.finlex.fi/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "fj": [
+   {
+    "name": "Laws of Fiji",
+    "publisher": "Office of the Solicitor-General",
+    "url": "https://www.laws.gov.fj/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "fk": [
+   {
+    "name": "Falkland Islands Government: legislation",
+    "publisher": "Falkland Islands Government",
+    "url": "https://www.falklands.gov.fk/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "fm": [
+   {
+    "name": "FSM Law (Code and court decisions)",
+    "publisher": "FSM Legal Information System",
+    "url": "https://www.fsmlaw.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "fo": [
+   {
+    "name": "Lógasavn (laws of the Faroe Islands)",
+    "publisher": "Government of the Faroe Islands",
+    "url": "https://www.logir.fo/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "fr": [
+   {
+    "name": "Légifrance",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ga": [
+   {
+    "name": "Journal officiel du Gabon",
+    "publisher": "Government of Gabon",
+    "url": "https://journal-officiel.ga/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gb": [
+   {
+    "name": "legislation.gov.uk",
+    "publisher": "The National Archives",
+    "url": "https://www.legislation.gov.uk/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gd": [
+   {
+    "name": "Laws of Grenada",
+    "publisher": "Government of Grenada",
+    "url": "https://laws.gov.gd/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ge": [
+   {
+    "name": "Legislative Herald of Georgia",
+    "publisher": "Ministry of Justice",
+    "url": "https://matsne.gov.ge/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gf": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gg": [
+   {
+    "name": "Guernsey Legal Resources",
+    "publisher": "Royal Court of Guernsey",
+    "url": "https://www.guernseylegalresources.gg/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gh": [
+   {
+    "name": "GhaLII",
+    "publisher": "Ghana Legal Information Institute",
+    "url": "https://ghalii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gi": [
+   {
+    "name": "Gibraltar Laws",
+    "publisher": "Government of Gibraltar",
+    "url": "https://www.gibraltarlaws.gov.gi/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gl": [
+   {
+    "name": "Nalunaarutit (laws of Greenland)",
+    "publisher": "Government of Greenland",
+    "url": "https://nalunaarutit.gl/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gm": [
+   {
+    "name": "GambiaLII",
+    "publisher": "GambiaLII",
+    "url": "https://gambialii.org/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gp": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gr": [
+   {
+    "name": "Government Gazette (ΦΕΚ)",
+    "publisher": "National Printing Office",
+    "url": "https://www.et.gr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gt": [
+   {
+    "name": "Diario de Centro América (gazette)",
+    "publisher": "Government of Guatemala",
+    "url": "https://www.dca.gob.gt/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gu": [
+   {
+    "name": "Compiler of Laws (Guam Code Annotated)",
+    "publisher": "Judiciary of Guam",
+    "url": "https://guamcourts.org/CompilerofLaws/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "gy": [
+   {
+    "name": "Laws of Guyana",
+    "publisher": "Ministry of Legal Affairs",
+    "url": "https://mola.gov.gy/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "hk": [
+   {
+    "name": "Hong Kong e-Legislation",
+    "publisher": "Department of Justice",
+    "url": "https://www.elegislation.gov.hk/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "hn": [
+   {
+    "name": "Diario Oficial La Gaceta",
+    "publisher": "Empresa Nacional de Artes Gráficas",
+    "url": "https://www.tsc.gob.hn/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "hr": [
+   {
+    "name": "Narodne novine",
+    "publisher": "Narodne novine d.d.",
+    "url": "https://narodne-novine.nn.hr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ht": [
+   {
+    "name": "Le Moniteur (official journal)",
+    "publisher": "Presses Nationales d'Haïti",
+    "url": "https://www.moniteur.ht/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "hu": [
+   {
+    "name": "Nemzeti Jogszabálytár",
+    "publisher": "Government of Hungary",
+    "url": "https://njt.hu/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "id": [
+   {
+    "name": "JDIH BPK (Indonesian laws database)",
+    "publisher": "Audit Board of Indonesia",
+    "url": "https://peraturan.bpk.go.id/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ie": [
+   {
+    "name": "Irish Statute Book",
+    "publisher": "Office of the Attorney General",
+    "url": "https://www.irishstatutebook.ie/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "il": [
+   {
+    "name": "Nevo / Knesset laws (Reshumot)",
+    "publisher": "Knesset",
+    "url": "https://main.knesset.gov.il/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "im": [
+   {
+    "name": "Isle of Man Legislation",
+    "publisher": "Attorney General's Chambers",
+    "url": "https://legislation.gov.im/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "in": [
+   {
+    "name": "India Code",
+    "publisher": "Legislative Department, Ministry of Law and Justice",
+    "url": "https://www.indiacode.nic.in/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "e-Gazette of India",
+    "publisher": "Department of Publication",
+    "url": "https://egazette.gov.in/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "iq": [
+   {
+    "name": "Iraqi Legal Database",
+    "publisher": "Iraqi Council of State",
+    "url": "http://iraqld.hjc.iq/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "is": [
+   {
+    "name": "Alþingi: lagasafn",
+    "publisher": "Althingi",
+    "url": "https://www.althingi.is/lagasafn/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "it": [
+   {
+    "name": "Normattiva",
+    "publisher": "Istituto Poligrafico e Zecca dello Stato",
+    "url": "https://www.normattiva.it/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "je": [
+   {
+    "name": "Jersey Law",
+    "publisher": "Jersey Legal Information Board",
+    "url": "https://www.jerseylaw.je/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "jm": [
+   {
+    "name": "Laws of Jamaica",
+    "publisher": "Ministry of Justice",
+    "url": "https://laws.moj.gov.jm/",
+    "check": "temporarily unavailable when checked",
+    "checked": "2026-11-01"
+   }
+  ],
+  "jo": [
+   {
+    "name": "Legislation and Opinion Bureau",
+    "publisher": "Government of Jordan",
+    "url": "https://lob.gov.jo/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "jp": [
+   {
+    "name": "e-Gov Laws (e-Gov 法令検索)",
+    "publisher": "Digital Agency of Japan",
+    "url": "https://laws.e-gov.go.jp/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Japanese Law Translation",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.japaneselawtranslation.go.jp/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ke": [
+   {
+    "name": "Kenya Law",
+    "publisher": "National Council for Law Reporting",
+    "url": "https://kenyalaw.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "kg": [
+   {
+    "name": "Centralised database of legal information",
+    "publisher": "Ministry of Justice",
+    "url": "https://cbd.minjust.gov.kg/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "kh": [
+   {
+    "name": "Council of Ministers: laws",
+    "publisher": "Royal Government of Cambodia",
+    "url": "https://pressocm.gov.kh/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ki": [
+   {
+    "name": "PacLII: Kiribati",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/ki/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "kn": [
+   {
+    "name": "Laws of St Kitts and Nevis",
+    "publisher": "Law Commission",
+    "url": "https://lawcommission.gov.kn/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "kr": [
+   {
+    "name": "National Law Information Center",
+    "publisher": "Ministry of Government Legislation",
+    "url": "https://www.law.go.kr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Korean laws in English",
+    "publisher": "Korea Legislation Research Institute",
+    "url": "https://elaw.klri.re.kr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "kw": [
+   {
+    "name": "Kuwait Legal Portal",
+    "publisher": "Government of Kuwait",
+    "url": "https://www.e.gov.kw/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ky": [
+   {
+    "name": "Cayman Islands Legislation",
+    "publisher": "Legislation Department",
+    "url": "https://legislation.gov.ky/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "kz": [
+   {
+    "name": "Adilet (legal information system)",
+    "publisher": "Ministry of Justice",
+    "url": "https://adilet.zan.kz/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "la": [
+   {
+    "name": "Official Gazette of Lao PDR",
+    "publisher": "Ministry of Justice",
+    "url": "https://laoofficialgazette.gov.la/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "lb": [
+   {
+    "name": "Lebanese University: legal informatics centre (official texts)",
+    "publisher": "Lebanese University",
+    "url": "http://www.legallaw.ul.edu.lb/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "lc": [
+   {
+    "name": "Laws of Saint Lucia",
+    "publisher": "Attorney General's Chambers",
+    "url": "https://attorneygeneralchambers.govt.lc/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "li": [
+   {
+    "name": "Gesetze.li",
+    "publisher": "Government of Liechtenstein",
+    "url": "https://www.gesetze.li/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "lk": [
+   {
+    "name": "Lawnet (Sri Lanka)",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.lawnet.gov.lk/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "lr": [
+   {
+    "name": "LiberLII",
+    "publisher": "LiberLII",
+    "url": "https://liberlii.org/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ls": [
+   {
+    "name": "LesLII",
+    "publisher": "LesLII",
+    "url": "https://lesotholii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "lt": [
+   {
+    "name": "TAR (Register of Legal Acts)",
+    "publisher": "Seimas",
+    "url": "https://www.e-tar.lt/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "lu": [
+   {
+    "name": "Legilux",
+    "publisher": "Government of Luxembourg",
+    "url": "https://legilux.public.lu/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "lv": [
+   {
+    "name": "Likumi.lv",
+    "publisher": "Latvijas Vēstnesis",
+    "url": "https://likumi.lv/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ma": [
+   {
+    "name": "Bulletin officiel",
+    "publisher": "Secretariat General of the Government",
+    "url": "https://www.sgg.gov.ma/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mc": [
+   {
+    "name": "Légimonaco",
+    "publisher": "Government of Monaco",
+    "url": "https://www.legimonaco.mc/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "md": [
+   {
+    "name": "Legis.md",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.legis.md/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "me": [
+   {
+    "name": "Official Gazette of Montenegro",
+    "publisher": "Government of Montenegro",
+    "url": "https://www.sluzbenilist.me/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mf": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mg": [
+   {
+    "name": "Journal officiel (Madagascar)",
+    "publisher": "Government of Madagascar",
+    "url": "https://www.cnlegis.gov.mg/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mh": [
+   {
+    "name": "Nitijela (Parliament) of the Marshall Islands: legislation",
+    "publisher": "Nitijela",
+    "url": "https://rmiparliament.org/cms/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mk": [
+   {
+    "name": "Official Gazette",
+    "publisher": "Government of North Macedonia",
+    "url": "https://www.slvesnik.com.mk/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ml": [
+   {
+    "name": "Secrétariat général du gouvernement du Mali",
+    "publisher": "Government of Mali",
+    "url": "https://sgg-mali.ml/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mm": [
+   {
+    "name": "Myanmar Law Information System",
+    "publisher": "Union Attorney General's Office",
+    "url": "https://www.mlis.gov.mm/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mn": [
+   {
+    "name": "Legal Information System of Mongolia",
+    "publisher": "Ministry of Justice and Home Affairs",
+    "url": "https://legalinfo.mn/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mo": [
+   {
+    "name": "Imprensa Oficial (Official Gazette of Macao)",
+    "publisher": "Government of Macao SAR",
+    "url": "https://www.io.gov.mo/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mp": [
+   {
+    "name": "CNMI Law Revision Commission",
+    "publisher": "CNMI Law Revision Commission",
+    "url": "https://cnmilaw.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mq": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ms": [
+   {
+    "name": "Revised Edition of the Laws of Montserrat (as at 1 January 2025)",
+    "publisher": "Attorney General's Chambers",
+    "url": "https://www.gov.ms/government/legal-department/attorney-generals-chambers/acts-revised-2025/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mt": [
+   {
+    "name": "Legislation Malta",
+    "publisher": "Ministry for Justice",
+    "url": "https://legislation.mt/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mu": [
+   {
+    "name": "Supreme Court of Mauritius: laws",
+    "publisher": "Supreme Court",
+    "url": "https://supremecourt.govmu.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mv": [
+   {
+    "name": "Attorney General's Office: laws of the Maldives",
+    "publisher": "Attorney General's Office",
+    "url": "https://www.agoffice.gov.mv/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mw": [
+   {
+    "name": "MalawiLII",
+    "publisher": "MalawiLII",
+    "url": "https://malawilii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mx": [
+   {
+    "name": "Diario Oficial de la Federación",
+    "publisher": "Secretaría de Gobernación",
+    "url": "https://www.dof.gob.mx/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Leyes federales vigentes",
+    "publisher": "Cámara de Diputados",
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "my": [
+   {
+    "name": "Laws of Malaysia (LOM)",
+    "publisher": "Attorney General's Chambers",
+    "url": "https://lom.agc.gov.my/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "mz": [
+   {
+    "name": "Boletim da República",
+    "publisher": "Imprensa Nacional",
+    "url": "https://www.imprensanac.gov.mz/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "na": [
+   {
+    "name": "NamibLII",
+    "publisher": "NamibLII",
+    "url": "https://namiblii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "nc": [
+   {
+    "name": "Juridoc (laws of New Caledonia)",
+    "publisher": "Government of New Caledonia",
+    "url": "https://www.juridoc.gouv.nc/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ne": [
+   {
+    "name": "Journal officiel du Niger",
+    "publisher": "Government of Niger",
+    "url": "https://www.journalofficiel.ne/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "nf": [
+   {
+    "name": "Federal Register of Legislation (Norfolk Island laws)",
+    "publisher": "Office of Parliamentary Counsel",
+    "url": "https://www.legislation.gov.au/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ng": [
+   {
+    "name": "Laws of the Federation (NigeriaLII)",
+    "publisher": "NigeriaLII",
+    "url": "https://nigerialii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ni": [
+   {
+    "name": "Asamblea Nacional: legislación (Normas Jurídicas)",
+    "publisher": "National Assembly of Nicaragua",
+    "url": "http://legislacion.asamblea.gob.ni/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "nl": [
+   {
+    "name": "Overheid.nl: wetten",
+    "publisher": "Government of the Netherlands",
+    "url": "https://wetten.overheid.nl/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "no": [
+   {
+    "name": "Lovdata",
+    "publisher": "Lovdata Foundation",
+    "url": "https://lovdata.no/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "np": [
+   {
+    "name": "Nepal Law Commission",
+    "publisher": "Nepal Law Commission",
+    "url": "https://lawcommission.gov.np/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "nr": [
+   {
+    "name": "RONLAW (Republic of Nauru Law)",
+    "publisher": "Government of Nauru",
+    "url": "https://ronlaw.gov.nr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "nu": [
+   {
+    "name": "PacLII: Niue",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/nu/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "nz": [
+   {
+    "name": "New Zealand Legislation",
+    "publisher": "Parliamentary Counsel Office",
+    "url": "https://www.legislation.govt.nz/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "om": [
+   {
+    "name": "Qanoon.om / Ministry of Justice and Legal Affairs",
+    "publisher": "Government of Oman",
+    "url": "https://mjla.gov.om/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pa": [
+   {
+    "name": "Gaceta Oficial de Panamá",
+    "publisher": "Government of Panama",
+    "url": "https://www.gacetaoficial.gob.pa/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pe": [
+   {
+    "name": "SPIJ (Sistema Peruano de Información Jurídica)",
+    "publisher": "Ministry of Justice",
+    "url": "https://spij.minjus.gob.pe/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pf": [
+   {
+    "name": "LexPol (laws of French Polynesia)",
+    "publisher": "Government of French Polynesia",
+    "url": "https://lexpol.cloud.pf/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pg": [
+   {
+    "name": "PacLII: Papua New Guinea",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/pg/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ph": [
+   {
+    "name": "Official Gazette",
+    "publisher": "Presidential Communications Office",
+    "url": "https://www.officialgazette.gov.ph/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Supreme Court E-Library",
+    "publisher": "Supreme Court of the Philippines",
+    "url": "https://elibrary.judiciary.gov.ph/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pk": [
+   {
+    "name": "Pakistan Code",
+    "publisher": "Ministry of Law and Justice",
+    "url": "https://pakistancode.gov.pk/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pl": [
+   {
+    "name": "ISAP (Internet System of Legal Acts)",
+    "publisher": "Sejm",
+    "url": "https://isap.sejm.gov.pl/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pm": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pn": [
+   {
+    "name": "Pitcairn Islands legislation (PacLII)",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/pn/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pr": [
+   {
+    "name": "Biblioteca Virtual de OGP (laws of Puerto Rico)",
+    "publisher": "Oficina de Gerencia y Presupuesto",
+    "url": "https://bvirtualogp.pr.gov/ogp/BVirtual/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ps": [
+   {
+    "name": "Al-Muqtafi (Palestinian legislation database)",
+    "publisher": "Birzeit University Institute of Law",
+    "url": "https://muqtafi.birzeit.edu/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pt": [
+   {
+    "name": "Diário da República",
+    "publisher": "INCM",
+    "url": "https://diariodarepublica.pt/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "pw": [
+   {
+    "name": "Palau National Code (Government of Palau)",
+    "publisher": "Government of Palau",
+    "url": "https://www.palaugov.pw/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "py": [
+   {
+    "name": "BACN (Biblioteca y Archivo del Congreso)",
+    "publisher": "Congress of Paraguay",
+    "url": "https://www.bacn.gov.py/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "qa": [
+   {
+    "name": "Al Meezan (Qatar legal portal)",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.almeezan.qa/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "re": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ro": [
+   {
+    "name": "Legislatie.just.ro",
+    "publisher": "Ministry of Justice",
+    "url": "https://legislatie.just.ro/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "rs": [
+   {
+    "name": "Legal Information System",
+    "publisher": "Government of Serbia",
+    "url": "https://www.pravno-informacioni-sistem.rs/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ru": [
+   {
+    "name": "Official internet portal of legal information",
+    "publisher": "Government of Russia",
+    "url": "http://pravo.gov.ru/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "rw": [
+   {
+    "name": "Official Gazette (Primature)",
+    "publisher": "Government of Rwanda",
+    "url": "https://www.primature.gov.rw/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sa": [
+   {
+    "name": "Bureau of Experts: laws and regulations",
+    "publisher": "Bureau of Experts at the Council of Ministers",
+    "url": "https://laws.boe.gov.sa/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sb": [
+   {
+    "name": "PacLII: Solomon Islands",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/sb/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sc": [
+   {
+    "name": "SeyLII",
+    "publisher": "Judiciary of Seychelles",
+    "url": "https://seylii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sd": [
+   {
+    "name": "Sudan: Ministry of Justice",
+    "publisher": "Government of Sudan",
+    "url": "https://moj.gov.sd/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "se": [
+   {
+    "name": "Riksdagen: Svensk författningssamling",
+    "publisher": "Riksdag",
+    "url": "https://www.riksdagen.se/sv/dokument-och-lagar/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sg": [
+   {
+    "name": "Singapore Statutes Online",
+    "publisher": "Attorney-General's Chambers",
+    "url": "https://sso.agc.gov.sg/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sh": [
+   {
+    "name": "St Helena Government: laws",
+    "publisher": "St Helena Government",
+    "url": "https://www.sainthelena.gov.sh/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "si": [
+   {
+    "name": "PIS (Legal Information System)",
+    "publisher": "Government of Slovenia",
+    "url": "https://pisrs.si/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sj": [
+   {
+    "name": "Lovdata (Norwegian law, Svalbard regulations)",
+    "publisher": "Lovdata Foundation",
+    "url": "https://lovdata.no/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sk": [
+   {
+    "name": "Slov-Lex",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.slov-lex.sk/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sl": [
+   {
+    "name": "Sierra Leone Laws (SierraLII)",
+    "publisher": "SierraLII",
+    "url": "https://sierralii.gov.sl/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sm": [
+   {
+    "name": "Consiglio Grande e Generale: leggi",
+    "publisher": "Republic of San Marino",
+    "url": "https://www.consigliograndeegenerale.sm/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sn": [
+   {
+    "name": "Journal officiel du Sénégal",
+    "publisher": "Government of Senegal",
+    "url": "https://www.jo.gouv.sn/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "so": [
+   {
+    "name": "Somalia: laws (AfricanLII)",
+    "publisher": "AfricanLII",
+    "url": "https://africanlii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sr": [
+   {
+    "name": "De Nationale Assemblee: wetgeving",
+    "publisher": "National Assembly of Suriname",
+    "url": "https://dna.sr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ss": [
+   {
+    "name": "South Sudan: laws (AfricanLII)",
+    "publisher": "AfricanLII",
+    "url": "https://africanlii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sv": [
+   {
+    "name": "Asamblea Legislativa: leyes",
+    "publisher": "Legislative Assembly of El Salvador",
+    "url": "https://www.asamblea.gob.sv/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sx": [
+   {
+    "name": "Government of Sint Maarten: laws",
+    "publisher": "Government of Sint Maarten",
+    "url": "https://www.sintmaartengov.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "sz": [
+   {
+    "name": "EswatiniLII",
+    "publisher": "EswatiniLII",
+    "url": "https://eswatinilii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tc": [
+   {
+    "name": "Turks and Caicos Islands Government: laws",
+    "publisher": "Attorney General's Chambers",
+    "url": "https://www.gov.tc/agc/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tf": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tg": [
+   {
+    "name": "Journal officiel de la République togolaise",
+    "publisher": "Government of Togo",
+    "url": "https://jo.gouv.tg/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "th": [
+   {
+    "name": "Royal Thai Government Gazette",
+    "publisher": "Secretariat of the Cabinet",
+    "url": "https://ratchakitcha.soc.go.th/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Office of the Council of State: laws",
+    "publisher": "Office of the Council of State",
+    "url": "https://www.krisdika.go.th/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tj": [
+   {
+    "name": "Central legal information database",
+    "publisher": "Ministry of Justice",
+    "url": "http://www.adlia.tj/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tk": [
+   {
+    "name": "PacLII: Tokelau",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/tk/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tl": [
+   {
+    "name": "Jornal da República",
+    "publisher": "Government of Timor-Leste",
+    "url": "https://www.jornal.gov.tl/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tn": [
+   {
+    "name": "Journal officiel (JORT)",
+    "publisher": "Imprimerie officielle",
+    "url": "http://www.iort.gov.tn/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "to": [
+   {
+    "name": "Tonga Legislation",
+    "publisher": "Attorney General's Office",
+    "url": "https://legislation.to/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tr": [
+   {
+    "name": "Mevzuat Bilgi Sistemi",
+    "publisher": "Presidency of Türkiye",
+    "url": "https://www.mevzuat.gov.tr/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tt": [
+   {
+    "name": "Laws of Trinidad and Tobago",
+    "publisher": "Ministry of the Attorney General",
+    "url": "https://laws.gov.tt/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tv": [
+   {
+    "name": "Tuvalu Legislation",
+    "publisher": "Office of the Attorney-General",
+    "url": "https://tuvalu-legislation.tv/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tw": [
+   {
+    "name": "Laws and Regulations Database",
+    "publisher": "Ministry of Justice",
+    "url": "https://law.moj.gov.tw/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "tz": [
+   {
+    "name": "Tanzania Laws (TanzLII)",
+    "publisher": "Judiciary of Tanzania",
+    "url": "https://tanzlii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ua": [
+   {
+    "name": "Verkhovna Rada: legislation",
+    "publisher": "Parliament of Ukraine",
+    "url": "https://zakon.rada.gov.ua/",
+    "check": "didn't load when checked from Australia",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ug": [
+   {
+    "name": "ULII (Uganda Legal Information Institute)",
+    "publisher": "Judiciary of Uganda",
+    "url": "https://ulii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "us": [
+   {
+    "name": "United States Code",
+    "publisher": "Office of the Law Revision Counsel",
+    "url": "https://uscode.house.gov/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "Code of Federal Regulations (eCFR)",
+    "publisher": "Office of the Federal Register",
+    "url": "https://www.ecfr.gov/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "uy": [
+   {
+    "name": "IMPO (Centro de Información Oficial)",
+    "publisher": "IMPO",
+    "url": "https://www.impo.com.uy/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "uz": [
+   {
+    "name": "Lex.uz (national database of legislation)",
+    "publisher": "Ministry of Justice",
+    "url": "https://lex.uz/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "va": [
+   {
+    "name": "Vatican City State: laws",
+    "publisher": "Governorate of Vatican City State",
+    "url": "https://www.vaticanstate.va/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "vc": [
+   {
+    "name": "Laws of St Vincent and the Grenadines",
+    "publisher": "Government of SVG",
+    "url": "https://www.gov.vc/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ve": [
+   {
+    "name": "Gaceta Oficial",
+    "publisher": "Imprenta Nacional",
+    "url": "http://www.imprentanacional.gob.ve/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "vg": [
+   {
+    "name": "BVI laws (Attorney General's Chambers)",
+    "publisher": "Government of the Virgin Islands",
+    "url": "https://bvi.gov.vg/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "vi": [
+   {
+    "name": "Legislature of the US Virgin Islands",
+    "publisher": "Legislature of the Virgin Islands",
+    "url": "https://www.legvi.org/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "vn": [
+   {
+    "name": "National Database of Legal Documents",
+    "publisher": "Ministry of Justice",
+    "url": "https://vbpl.vn/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "vu": [
+   {
+    "name": "PacLII: Vanuatu",
+    "publisher": "PacLII",
+    "url": "https://www.paclii.org/vu/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "wf": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "ws": [
+   {
+    "name": "Legislative Assembly of Samoa",
+    "publisher": "Parliament of Samoa",
+    "url": "https://www.palemene.ws/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "xk": [
+   {
+    "name": "Official Gazette of Kosovo",
+    "publisher": "Government of Kosovo",
+    "url": "https://gzk.rks-gov.net/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "yt": [
+   {
+    "name": "Légifrance (French law applies)",
+    "publisher": "Government of France",
+    "url": "https://www.legifrance.gouv.fr/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "za": [
+   {
+    "name": "Government Gazette / South African Government",
+    "publisher": "Government of South Africa",
+    "url": "https://www.gov.za/documents/acts",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   },
+   {
+    "name": "SAFLII",
+    "publisher": "Southern African Legal Information Institute",
+    "url": "https://www.saflii.org/",
+    "check": "refuses automated checks (open it in a browser)",
+    "checked": "2026-11-01"
+   }
+  ],
+  "zm": [
+   {
+    "name": "ZambiaLII",
+    "publisher": "Judiciary of Zambia",
+    "url": "https://zambialii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ],
+  "zw": [
+   {
+    "name": "ZimLII",
+    "publisher": "ZimLII",
+    "url": "https://zimlii.org/",
+    "check": "loaded",
+    "checked": "2026-11-01"
+   }
+  ]
+ },
+ "groups": [
+  {
+   "id": "pacific",
+   "name": "Pacific Islands Legal Information Institute",
+   "members": [
+    "ck",
+    "fj",
+    "ki",
+    "mh",
+    "fm",
+    "nr",
+    "nu",
+    "pw",
+    "pg",
+    "ws",
+    "sb",
+    "tk",
+    "to",
+    "tv",
+    "vu",
+    "pn"
+   ],
+   "repositories": [
+    {
+     "name": "PacLII (Pacific Islands Legal Information Institute)",
+     "publisher": "University of the South Pacific School of Law",
+     "url": "https://www.paclii.org/",
+     "check": "refuses automated checks (open it in a browser)",
+     "checked": "2026-11-01"
+    }
+   ]
+  },
+  {
+   "id": "eu",
+   "name": "European Union",
+   "members": [
+    "at",
+    "be",
+    "bg",
+    "hr",
+    "cy",
+    "cz",
+    "dk",
+    "ee",
+    "fi",
+    "fr",
+    "de",
+    "gr",
+    "hu",
+    "ie",
+    "it",
+    "lv",
+    "lt",
+    "lu",
+    "mt",
+    "nl",
+    "pl",
+    "pt",
+    "ro",
+    "sk",
+    "si",
+    "es",
+    "se"
+   ],
+   "repositories": [
+    {
+     "name": "EUR-Lex (EU law)",
+     "publisher": "Publications Office of the European Union",
+     "url": "https://eur-lex.europa.eu/",
+     "check": "loaded",
+     "checked": "2026-11-01"
+    }
+   ]
+  }
+ ],
+ "not_yet_found": [
+  "af",
+  "bi",
+  "cf",
+  "cg",
+  "dj",
+  "eh",
+  "er",
+  "gn",
+  "gq",
+  "gs",
+  "gw",
+  "io",
+  "ir",
+  "km",
+  "kp",
+  "ly",
+  "mr",
+  "st",
+  "sy",
+  "td",
+  "tm",
+  "ye"
+ ]
+}
