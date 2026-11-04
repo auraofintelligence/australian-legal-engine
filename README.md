@@ -159,6 +159,7 @@ NT [legislation.nt.gov.au](https://legislation.nt.gov.au/) ·
 
 - **Australian Law: Luke's Relevance** — the method and the design: https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/
 - **Legal Memory Workbench** — map your own side of the table: https://auraofintelligence.github.io/legal-memory-workbench/
+- **[Australian Household Bill Check](https://auraofintelligence.github.io/household-bill-check/bill-check.html#contract-audit)** — start with a household contract and export the references and questions. Then use the engine to retrieve provisions from the relevant official Acts you have indexed.
 - **P4A** — the civic campaign workbench, forms first: https://p4a.xyz/pages/site-map.html
 - **Strange But True** — https://auraofintelligence.github.io/strange-but-true/
 - **Aura of Intelligence** — https://auraofintelligence.github.io/
